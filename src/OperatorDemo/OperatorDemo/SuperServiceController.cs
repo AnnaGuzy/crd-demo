@@ -36,6 +36,9 @@ namespace OperatorDemo
                 Name = entity.Name(),
                 Uid = entity.Uid()
             });
+
+            // upsert
+            // keeps reconciliation idempotent
             await _kubernetesClient.SaveAsync(configMap, cancellationToken);
 
             var deployment = new V1Deployment

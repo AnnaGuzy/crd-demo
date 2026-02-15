@@ -10,7 +10,6 @@ namespace OperatorDemo
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllers();
-            builder.Services.Configure<DemoOperatorOptions>(builder.Configuration);
             builder.Logging.AddSimpleConsole(options => options.IncludeScopes = true);
 
             var operatorBuilder = builder.Services.AddKubernetesOperator(x => x.Namespace = "crd-demo");
