@@ -1,0 +1,13 @@
+apiVersion: demo.holisticon.com/v1alpha1
+kind: SuperService
+metadata:
+  name: mysuperservice
+  namespace: crd-demo
+spec:
+  superDictionary:
+   - name: abc
+     value: foo
+   - name: def
+     value: bar
+  superNumber: 8
+  otherNumber: 11
